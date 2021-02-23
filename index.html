@@ -110,29 +110,21 @@ function letterValue(str){
 }
 
 function all(){
-
-    
-        console.log(dictionary.length);
-    
+    console.log(dictionary.length);
     var good ="";
-   
-    
      for(var item in dictionary){
-        
-         console.log(dictionart[item]);      
-         
-        numbers = letterValue(dictionart[item])
+        console.log(dictionart[item]);  
+        var total=0;
+        numbers = letterValue(dictionart[item]);
         for(var i in numbers) { 
             total += numbers[i]; 
-            if(total ==100)
-            {
-             good = good + ",";   
-            }
-           
+                if(total===100)
+                {
+                 good = good + ",";   
+                }
         }
-         document.getElementById('answer').innerHTML = good
+         document.getElementById('answer').innerHTML = good;
     }
-
 }
 
     
