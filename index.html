@@ -36,6 +36,50 @@
                 </tbody>
             </thead>
         </table>
-        <div style="margin top: 500 px"></div>
+        <div style="margin top: 500 px">
+            <input id="word" type="text">
+            <!--<button id="go" onclick=go()>
+            calculate
+            </button>-->
+            <br>
+            <br>
+            <label id="answer"></label>
+        </div>
     </body>
+<script>
+    
+var input = document.getElementById("word");
+
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("go").click();
+    }
+    if (event.keyCode === 8) {
+        document.getElementById('answer').innerHTML = ''
+    }
+});
+
+
+
+function letterValue(str){
+    var anum={
+        a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, 
+        l: 12, m: 13, n: 14,o: 15, p: 16, q: 17, r: 18, s: 19, t: 20, 
+        u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
+    }
+    if(str.length== 1) return anum[str] || ' ';
+    return str.split('').map(letterValue);
+}
+
+
+function go(){
+    var word = document.getElementById('word').value
+    var numbers = letterValue(word)
+    var total=0;
+    for(var i in numbers) { total += numbers[i]; }
+    document.getElementById('answer').innerHTML = total
+}
+
+</script>
 </html> 
