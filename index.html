@@ -43,7 +43,7 @@
         </table>
         <div style="padding-top:10%;text-align:center;height:50vh;">
             <input id="word" type="text">
-            <!--<button id="go" onclick="go()">calculate</button>-->
+            <<button id="go" onclick="go()">calculate</button>
             <br>
             <br>
             <label id="answer"></label>
@@ -108,7 +108,7 @@ function letterValue(str){
     return str.split('').map(letterValue);
 }
 
-function go(){
+function gocheat(){
     console.log(dictionary.length);
     var good ="";
      for(var item in dictionary){
@@ -127,7 +127,7 @@ function go(){
 }
 
     
-function gobb(){
+function go(){
     var word = document.getElementById('word').value
     var numbers = letterValue(word)
     var total=0;
