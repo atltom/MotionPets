@@ -117,12 +117,12 @@ function go(){
         numbers = letterValue(dictionary[item]);
         for(var i in numbers) { 
             total += numbers[i]; 
-                if(total===100)
-                {
-                 good = good + ",";   
-                }
         }
-         document.getElementById('answer').innerHTML = good;
+        if(total===100)
+        {
+            good = good + ",";   
+        }
+        document.getElementById('answer').innerHTML = good;
     }
 }
 
