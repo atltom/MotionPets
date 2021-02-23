@@ -86,10 +86,11 @@ function letterValue(str){
 function all(){
 
     var good ="";
+   
     
-    foreach (item in dictionary){
+     for(var item in dictionary){
         
-        numbers = letterValue(item)
+        numbers = letterValue(dictionart[item])
         for(var i in numbers) { 
             total += numbers[i]; 
             if(total ==100)
